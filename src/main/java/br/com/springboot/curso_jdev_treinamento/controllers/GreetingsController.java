@@ -23,4 +23,11 @@ public class GreetingsController {
     public String greetingText(@PathVariable String name) {
         return "Curso spring boot " + name + "!";
     }
+    
+    @ResponseStatus(HttpStatus.OK)
+    @RequestMapping(value = "/olamundo/{nome}")
+    public String retornaOlaMundo(@PathVariable String nome) {
+    	return "Ola mundo " + nome;
+    }
+    
 }
